@@ -1,41 +1,36 @@
 @extends('home')
 
 @section('index')
-    <button type="button" class="btn btn-primary"><a href="{{route('phone.index')}}"
-                                                     style="color: white"><-Back</a>
-    </button>
+    <a class="btn btn-primary" href="{{route('phone.index')}}"
+                                                     style="color: white">@lang('message.back')</a>
     <hr>
     <div class="row d-flex justify-content-center">
         <div class="col-6">
             <form method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">@lang('message.name')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('name'))
                         border-danger
                 @endif
-                        " id="name" name="name" placeholder="name">
+                        " id="name" name="name">
                     @if ($errors->has('name'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('name')}}
+                            !{{$errors->first('name')}}
                         </p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="color">Color</label>
+                    <label for="color">@lang('message.color')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('color'))
                         border-danger
                 @endif
-                        " id="color" name="color" placeholder="color">
+                        " id="color" name="color">
                     @if ($errors->has('color'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('color')}}</p>
+                            !{{$errors->first('color')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
@@ -44,75 +39,65 @@
                 @if ($errors->has('ram'))
                         border-danger
                 @endif
-                        " id="ram" name="ram" placeholder="ram">
+                        " id="ram" name="ram">
                     @if ($errors->has('ram'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('ram')}}</p>
+                            !{{$errors->first('ram')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="internal_memory">Internal memory</label>
+                    <label for="internal_memory">@lang('message.memory')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('internal_memory'))
                         border-danger
                 @endif
-                        " id="internal_memory" name="internal_memory" placeholder="internal_memory">
+                        " id="internal_memory" name="internal_memory">
                     @if ($errors->has('internal_memory'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('internal_memory')}}</p>
+                            !{{$errors->first('internal_memory')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="sim">Number of sims</label>
+                    <label for="sim">@lang('message.SIM')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('sim'))
                         border-danger
                 @endif
-                        " id="sim" name="sim" placeholder="sim">
+                        " id="sim" name="sim">
                     @if ($errors->has('sim'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('sim')}}</p>
+                            !{{$errors->first('sim')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="screen_size">Screen size</label>
+                    <label for="screen_size">@lang('message.screen')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('screen_size'))
                         border-danger
                 @endif
-                        " id="screen_size" name="screen_size" placeholder="screen_size">
+                        " id="screen_size" name="screen_size">
                     @if ($errors->has('screen_size'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('screen_size')}}</p>
+                            !{{$errors->first('screen_size')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="price">Price</label>
+                    <label for="price">@lang('message.price')</label>
                     <input type="text" class="form-control
                 @if ($errors->has('price'))
                         border-danger
                 @endif
-                        " id="price" name="price" placeholder="price">
+                        " id="price" name="price">
                     @if ($errors->has('price'))
                         <p class="text-danger">
-                            <img src="https://img.icons8.com/color/50/000000/high-importance.png"
-                                 style="width: 20px ;height: 20px">
-                            {{$errors->first('price')}}</p>
+                            !{{$errors->first('price')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <label for="image">Image</label>
-                    <input type="file" class="form-control" id="image" name="image" placeholder="image">
+                    <label for="image">@lang('message.image')</label>
+                    <input type="file" class="form-control" id="image" name="image">
                 </div>
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">@lang('message.create')</button>
             </form>
         </div>
     </div>

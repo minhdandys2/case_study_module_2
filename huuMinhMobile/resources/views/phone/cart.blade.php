@@ -1,17 +1,21 @@
 @extends('home')
 
 @section('index')
-    <button type="button" class="btn btn-primary"><a href="{{route('phone.index')}}"
-                                                     style="color: white"><-Back</a>
-    </button>
+    <a class="btn btn-primary" href="{{route('phone.index')}}"
+                                                     style="color: white"><-@lang('message.back')</a>
     <hr>
+    @if($cart)
+    <p>@lang('message.totalQty'): {{$cart->totalQty}}</p>
+        @else
+    <p>@lang('message.totalQty'): 0</p>
+    @endif
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">Image Phone</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Qty</th>
+            <th scope="col">@lang('message.image')</th>
+            <th scope="col">@lang('message.name')</th>
+            <th scope="col">@lang('message.price')</th>
+            <th scope="col">@lang('message.qty')</th>
         </tr>
         </thead>
         <tbody>
@@ -22,10 +26,11 @@
                 <td>{{$items['item']->name}}</td>
                 <td>{{$items['itemPrice']}}</td>
                 <td>{{$items['itemQty']}}</td>
+                <td><a href="{{route('cart.delete',$items['item']->id)}}">Delete</a></td>
             </tr>
         @endforeach
             <tr>
-                <td colspan="2">Total Price</td>
+                <td colspan="2">@lang('message.totalPrice')</td>
                 <td colspan="2">{{$cart->totalPrice}}</td>
             </tr>
         @endif

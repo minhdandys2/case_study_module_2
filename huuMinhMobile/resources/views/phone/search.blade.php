@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('index')
-    <a href="{{route('phone.create')}}" class="btn btn-success">@lang('message.Create')</a>
+    <a href="{{route('phone.create')}}" class="btn btn-success">@lang('message.create')</a>
     <br>
     <hr>
     <div class="row">
@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$phone->name}}</h5>
                         <p>{{$phone->price}}$</p>
-                        <a href="#" class="btn btn-primary">@lang('message.Add')</a>
+                        <a href="#" class="btn btn-primary">@lang('message.add')</a>
                     </div>
                 </div>
             </div>

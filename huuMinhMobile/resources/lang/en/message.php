@@ -1,17 +1,20 @@
 <?php
 return [
-    'Create' => 'Create phone',
-    'Back' => 'Back',
-    'Name' => 'Name',
-    'Color' => 'Color',
-    'Memory' => 'Internal memory',
+    'create' => 'Create phone',
+    'back' => 'Back',
+    'name' => 'Name',
+    'color' => 'Color',
+    'memory' => 'Internal memory',
     'SIM' => 'Number of SIM',
-    'Screen' => 'Screen size',
-    'Edit' => 'Edit',
-    'Delete' => 'Delete',
-    'Add' => 'Add to cart',
-    'Price' => 'Price',
-    'Image' => 'Image',
-    'Update' => 'Update'
-
+    'screen' => 'Screen size',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'add' => 'Add to cart',
+    'price' => 'Price',
+    'image' => 'Image',
+    'update' => 'Update',
+    'search' => 'Search',
+    'qty' => 'Qty',
+    'totalQty' => 'Total qty',
+    'totalPrice' => 'Total Price'
 ];

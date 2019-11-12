@@ -1,7 +1,9 @@
 @extends('home')
 
 @section('index')
-    <a href="{{route('phone.create')}}" class="btn btn-success">@lang('message.Create')</a>
+    @can('crud-user')
+        <a href="{{route('phone.create')}}" class="btn btn-success">@lang('message.create')</a>
+    @endcan
     <br>
     <hr>
     <div class="row">
@@ -17,7 +19,7 @@
                         <h5 class="card-title">{{$phone->name}}</h5>
                         <p>Ram: {{$phone->ram}} GB</p>
                         <p>{{$phone->price}} đ</p>
-                        <a href="{{route('phone.addToCart',$phone->id)}}" class="btn btn-primary">@lang('message.Add')</a>
+                        <a href="{{route('phone.addToCart',$phone->id)}}" class="btn btn-primary">@lang('message.add')</a>
                     </div>
                 </div>
             </div>

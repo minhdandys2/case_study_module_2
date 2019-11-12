@@ -29,4 +29,10 @@ class CartController extends Controller
         $cart = Session::has('cart')?Session::get('cart'):null;
         return view('phone.cart',compact('cart'));
     }
+
+    public function delete($id){
+        $cart = Session::has('cart')?Session::get('cart'):null;
+        array_splice($cart, $id, 1);
+        dd($cart);
+    }
 }
