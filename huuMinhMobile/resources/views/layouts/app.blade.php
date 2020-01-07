@@ -26,11 +26,12 @@
                 <img src="{{ asset('storage/images/anh3.gif') }} " width="300" height="50">
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{route('phone.index')}}">HOME
+                <a href="{{route('phone.index')}}">
+                    HOME
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="{{route('phone.showCart')}}">
-                CART
+                    CART
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="form-group">

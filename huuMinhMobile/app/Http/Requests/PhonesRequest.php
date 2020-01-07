@@ -30,7 +30,7 @@ class PhonesRequest extends FormRequest
             'internal_memory' => 'required',
             'sim' => 'required',
             'screen_size' => 'required',
-            'price' => 'required',
+            'price' => 'required|max:10',
         ];
     }
 
@@ -45,6 +45,7 @@ class PhonesRequest extends FormRequest
             'sim.required' => 'Cannot be empty',
             'screen_size.required' => 'Cannot be empty',
             'price.required' => 'Cannot be empty',
+            'price.max' => 'Is less than 10 digits'
         ];
     }
 }
